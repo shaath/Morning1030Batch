@@ -1,0 +1,28 @@
+package day2;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class methodseg2 
+{
+	public static void main(String[] args) 
+	{
+		String expurl="https://www.google.co.in/";
+		WebDriver driver=new FirefoxDriver();
+		driver.get("Http://google.com");
+		driver.manage().window().maximize();
+		
+		//getCurrentUrl()
+		System.out.println(driver.getCurrentUrl());
+		String acturl=driver.getCurrentUrl();
+		if (expurl.equalsIgnoreCase(acturl)) 
+		{
+			System.out.println("Pass");
+		}
+		else
+		{
+			System.out.println("Fail");
+		}
+	}
+
+}
